@@ -2,12 +2,15 @@
 
 A single-page, fully 3D-animated homepage for **kurieta.com**, built from a blank canvas for the Kurieta Full-Stack Developer assignment.
 
+**Live:** [https://kurieta.vercel.app](https://kurieta.vercel.app)  
+**Source:** [github.com/Tapishvais/Kurieta](https://github.com/Tapishvais/Kurieta)
+
 ## What the page does
 
 - Opens with a **fast branded pre-loader** (under 2 seconds) that melts into the hero without a cut
 - The hero has a **real 3D blob** built with a custom shader — it follows your cursor and reacts to how fast you scroll
-- Every section **animates as you scroll**: manifesto → services → case studies → contact → footer
-- The **contact form actually sends email**
+- Every section **animates as you scroll**: about / manifesto → process → services → case studies → stats → contact → footer
+- The **contact form is wired to send email** (Resend on Vercel; needs `RESEND_API_KEY` in project env)
 - Works on **desktop, tablet, and mobile**, and respects reduced-motion settings
 
 ## Tech stack (and why)
@@ -52,9 +55,9 @@ Production build: `yarn build`
 
 ## Deploy to Vercel
 
-1. Import this repo in Vercel and set **Root Directory** to `frontend`
-2. Add three environment variables: `RESEND_API_KEY`, `CONTACT_EMAIL`, `EMAIL_FROM`
-3. Done — `frontend/api/contact.js` handles the form automatically
+Root Directory is `frontend`. Live production URL: [kurieta.vercel.app](https://kurieta.vercel.app).
+
+To make the contact form send mail, add `RESEND_API_KEY`, `CONTACT_EMAIL`, and `EMAIL_FROM`. `frontend/api/contact.js` handles the rest.
 
 (`backend/` only exists so the contact form works in my dev preview — it is not part of the production deploy.)
 
