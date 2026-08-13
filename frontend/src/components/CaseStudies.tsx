@@ -118,7 +118,7 @@ export function CaseStudies({ reduced }: { reduced: boolean }) {
       >
         <div className="shrink-0 lg:w-[38vw]">
           <p className="mono-label mb-6" data-testid="case-studies-label">
-            05 — Selected Work
+            04 — Selected Work
           </p>
           <h2 className="font-serif text-2xl leading-[1.15] tracking-tight text-paper sm:text-3xl lg:text-4xl">
             Concept case studies,

@@ -84,7 +84,7 @@ export function Manifesto({ reduced }: { reduced: boolean }) {
         <div className="lg:col-span-4">
           <div className="lg:sticky lg:top-32">
             <p className="mono-label mb-6" data-testid="manifesto-label">
-              03 — Manifesto
+              02 — About / Manifesto
             </p>
             <h2 className="font-serif text-2xl leading-[1.15] tracking-tight text-paper sm:text-3xl lg:text-4xl">
               The principles
@@ -95,6 +95,10 @@ export function Manifesto({ reduced }: { reduced: boolean }) {
               Not an outside agency — an extension of your team. Four commitments, held without exception, on
               every engagement we accept.
             </p>
+            <div className="mt-10 space-y-2">
+              <p className="mono-label">Est. 2015 — Indianapolis</p>
+              <p className="mono-label">US · India · Canada · UK</p>
+            </div>
           </div>
         </div>
 

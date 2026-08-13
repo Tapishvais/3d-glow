@@ -1,19 +1,19 @@
 import { motion } from 'framer-motion'
-import { ArrowUp, Github, Instagram, Linkedin, Twitter } from 'lucide-react'
+import { ArrowUp, Globe, Linkedin, Mail, Phone } from 'lucide-react'
 import { elasticOut, scrollTo } from '../lib/scroll'
 
 const NAV = [
-  { label: 'Manifesto', href: '#manifesto', testId: 'footer-nav-link-manifesto' },
+  { label: 'About', href: '#manifesto', testId: 'footer-nav-link-manifesto' },
   { label: 'Services', href: '#services', testId: 'footer-nav-link-services' },
   { label: 'Work', href: '#work', testId: 'footer-nav-link-cases' },
   { label: 'Contact', href: '#contact', testId: 'footer-nav-link-contact' },
 ]
 
 const SOCIALS = [
-  { label: 'Twitter / X', icon: Twitter, testId: 'footer-social-twitter' },
-  { label: 'LinkedIn', icon: Linkedin, testId: 'footer-social-linkedin' },
-  { label: 'GitHub', icon: Github, testId: 'footer-social-github' },
-  { label: 'Instagram', icon: Instagram, testId: 'footer-social-instagram' },
+  { label: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/kurieta', testId: 'footer-social-linkedin' },
+  { label: 'Email', icon: Mail, href: 'mailto:info@kurieta.com', testId: 'footer-social-email' },
+  { label: 'Phone', icon: Phone, href: 'tel:+18778557799', testId: 'footer-social-phone' },
+  { label: 'Website', icon: Globe, href: 'https://kurieta.com', testId: 'footer-social-website' },
 ]
 
 export function Footer({ reduced }: { reduced: boolean }) {
@@ -87,8 +87,9 @@ export function Footer({ reduced }: { reduced: boolean }) {
             {SOCIALS.map((s) => (
               <a
                 key={s.label}
-                href="#top"
-                onClick={(e) => e.preventDefault()}
+                href={s.href}
+                target={s.href.startsWith('http') ? '_blank' : undefined}
+                rel={s.href.startsWith('http') ? 'noreferrer' : undefined}
                 data-testid={s.testId}
                 aria-label={s.label}
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white/60 transition-colors duration-500 ease-weighted hover:border-electric hover:bg-electric hover:text-paper"

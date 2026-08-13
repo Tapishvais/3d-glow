@@ -85,7 +85,7 @@ export function Contact({ reduced }: { reduced: boolean }) {
       <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
         <div>
           <p className="mono-label mb-6" data-testid="contact-label">
-            06 — Contact
+            05 — Contact
           </p>
           <h2 className="font-serif text-2xl leading-[1.15] tracking-tight text-paper sm:text-3xl lg:text-5xl">
             Let&rsquo;s build something <em className="italic text-electric">undeniable.</em>

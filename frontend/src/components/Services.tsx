@@ -121,7 +121,7 @@ export function Services({ reduced }: { reduced: boolean }) {
       <div className="mb-16 flex flex-wrap items-end justify-between gap-6 md:mb-24">
         <div>
           <p className="mono-label mb-6" data-testid="services-label">
-            04 — Services
+            03 — Services
           </p>
           <h2 className="font-serif text-2xl leading-[1.15] tracking-tight text-paper sm:text-3xl lg:text-4xl">
             Capabilities, stacked.
