@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --midnight: #0a0e1f;
+  --depth-1: #060814;
+  --depth-2: #121833;
+  --depth-3: #1a2247;
+  --paper: #f6f7fc;
+  --electric: #3d5cff;
+  --crimson: #ff2d62;
+  --ease-weighted: cubic-bezier(0.7, 0, 0.3, 1);
+  --ease-elastic: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    border-color: rgba(246, 247, 252, 0.08);
+  }
+  html {
+    background: var(--midnight);
+  }
+  body {
+    background: var(--midnight);
+    color: var(--paper);
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: var(--electric);
+    color: var(--paper);
+  }
+  html.custom-cursor,
+  html.custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+@layer components {
+  .mono-label {
+    @apply font-mono text-xs uppercase tracking-[0.25em] text-white/40;
+  }
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 1px;
+    width: 100%;
+    background: var(--electric);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s var(--ease-weighted);
+  }
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  .marquee-track {
+    animation: marquee 38s linear infinite;
+  }
+  .k-spin {
+    animation: kspin 16s linear infinite;
+  }
+  .preloader-text {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 560;
+    letter-spacing: 0.06em;
+    fill: transparent;
+    stroke: var(--paper);
+    stroke-width: 1.1;
+    stroke-dasharray: 560;
+    stroke-dashoffset: 560;
+    animation:
+      draw 1.15s var(--ease-weighted) 0.1s forwards,
+      fill-in 0.45s ease 1s forwards;
+  }
+  .scanlines {
+    background-image: repeating-linear-gradient(
+      0deg,
+      rgba(6, 8, 20, 0.35) 0 1px,
+      transparent 1px 5px
+    );
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes kspin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill-in {
+  to {
+    fill: var(--paper);
+  }
+}
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .k-spin {
+    animation: none !important;
+  }
+  .preloader-text {
+    animation: none !important;
+    stroke-dashoffset: 0;
+    fill: var(--paper);
+  }
+}
+
+@layer base {
+  [data-debug-wrapper='true'] {
+    display: contents !important;
+  }
+  [data-debug-wrapper='true'] > * {
+    margin-left: inherit;
+    margin-right: inherit;
+    margin-top: inherit;
+    margin-bottom: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    column-gap: inherit;
+    row-gap: inherit;
+    gap: inherit;
+    border-left-width: inherit;
+    border-right-width: inherit;
+    border-top-width: inherit;
+    border-bottom-width: inherit;
+    border-left-style: inherit;
+    border-right-style: inherit;
+    border-top-style: inherit;
+    border-bottom-style: inherit;
+    border-left-color: inherit;
+    border-right-color: inherit;
+    border-top-color: inherit;
+    border-bottom-color: inherit;
+  }
+}
