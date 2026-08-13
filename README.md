@@ -54,7 +54,7 @@ Production build: `yarn build`
 
 1. Import this repo in Vercel and set **Root Directory** to `frontend`
 2. Add three environment variables: `RESEND_API_KEY`, `CONTACT_EMAIL`, `EMAIL_FROM`
-3. Done — `frontend/api/contact.ts` handles the form automatically
+3. Done — `frontend/api/contact.js` handles the form automatically
 
 (`backend/` only exists so the contact form works in my dev preview — it is not part of the production deploy.)
 

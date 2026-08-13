@@ -6,10 +6,10 @@
 
 export const config = { runtime: 'edge' }
 
-const esc = (s: string) =>
-  s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!)
+const esc = (s) =>
+  s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c])
 
-export default async function handler(req: Request): Promise<Response> {
+export default async function handler(req) {
   if (req.method !== 'POST') return Response.json({ error: 'Method not allowed' }, { status: 405 })
   try {
     const { name, email, message } = await req.json()
