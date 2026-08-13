@@ -1,0 +1,253 @@
+{
+  "brand": {
+    "name": "Kurieta",
+    "domain": "kurieta.com",
+    "tagline": "Strategy. Creativity. Technology. In service of outcomes.",
+    "archetype": "LUXURY_DIGITAL_ARCHITECT",
+    "theme_mode": "dark_only"
+  },
+  "colors": {
+    "base": "#0A0E1F",
+    "base_depth_1": "#060814",
+    "base_depth_2": "#121833",
+    "base_depth_3": "#1A2247",
+    "border_subtle": "rgba(246, 247, 252, 0.08)",
+    "border_active": "rgba(61, 92, 255, 0.4)",
+    "text_primary": "#F6F7FC",
+    "text_secondary": "rgba(246, 247, 252, 0.65)",
+    "text_muted": "rgba(246, 247, 252, 0.4)",
+    "accent_primary": "#3D5CFF",
+    "accent_primary_glow": "rgba(61, 92, 255, 0.25)",
+    "accent_highlight": "#FF2D62",
+    "accent_highlight_glow": "rgba(255, 45, 98, 0.3)",
+    "rules": "No gradients on dark background surfaces. Depth must be achieved through flat layered dark structural tones (#060814, #0A0E1F, #121833, #1A2247) and delicate 1px borders with varying opacity."
+  },
+  "typography": {
+    "headline_font": "'Fraunces', 'Cormorant Garamond', serif",
+    "body_font": "'Plus Jakarta Sans', 'DM Sans', sans-serif",
+    "mono_font": "'JetBrains Mono', monospace",
+    "scale": {
+      "hero_h1": "text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight leading-[1.08]",
+      "section_h2": "text-2xl sm:text-3xl lg:text-4xl font-normal tracking-tight leading-[1.15]",
+      "chapter_h3": "text-xl sm:text-2xl font-light leading-snug",
+      "card_title": "text-lg sm:text-xl font-medium tracking-wide",
+      "body": "text-base text-secondary leading-relaxed",
+      "mono_label": "text-xs uppercase tracking-[0.25em] font-mono text-muted"
+    }
+  },
+  "motion": {
+    "easing": "cubic-bezier(0.7, 0, 0.3, 1)",
+    "duration": {
+      "fast": "200ms",
+      "standard": "400ms",
+      "weighted": "600ms"
+    },
+    "preloader": {
+      "max_duration_seconds": 1.8,
+      "svg_draw": "stroke-dashoffset sequence from 100% to 0%",
+      "digits": "counter animation from 00 to 100",
+      "handoff": "clip-path mask reveal opening vertically from center to unmask Hero WebGL canvas"
+    },
+    "custom_cursor": {
+      "dot_size": "8px",
+      "dot_color": "#3D5CFF",
+      "magnetic_target_selector": "button, a, input, textarea, [data-magnetic]",
+      "touch_device_behavior": "hidden / disabled via pointer-fine media query"
+    },
+    "reduced_motion": {
+      "prefers_reduced_motion": "Disable GSAP scroll-jacking and horizontal pinning. Render 2D high-resolution canvas poster instead of 3D WebGL shader blob."
+    }
+  },
+  "three_js_shader_spec": {
+    "target_component": "HeroBlobShader",
+    "library": "@react-three/fiber + three",
+    "geometry": "IcosahedronGeometry(2.2, 64)",
+    "material_type": "Custom ShaderMaterial with Simplex 3D Noise + Fresnel Iridescence",
+    "uniforms": {
+      "uTime": "float - continuous delta increment",
+      "uCursor": "vec2 - normalized mouse coordinates (-1 to 1)",
+      "uScrollVelocity": "float - driven by Lenis scroll delta",
+      "uBaseColor": "vec3(#0A0E1F)",
+      "uAccentColor": "vec3(#3D5CFF)",
+      "uIridescentHighlight": "vec3(#FF2D62)"
+    },
+    "interaction": "Blob warps vertices along normals based on cursor distance and scroll speed; material shifts iridescent hue along specular rim."
+  },
+  "sections": [
+    {
+      "id": "preloader",
+      "number": "01",
+      "title": "Branded Pre-loader",
+      "layout": "Fixed fullscreen overlay z-50 bg-[#060814]",
+      "key_elements": [
+        "Kurieta SVG wordmark with animated stroke-dasharray",
+        "Digital counter incrementing to 100 in mono font",
+        "Mask-reveal vertical shutter handoff"
+      ]
+    },
+    {
+      "id": "hero",
+      "number": "02",
+      "title": "Interactive 3D Hero",
+      "layout": "Relative h-screen w-full flex flex-col justify-between p-8 md:p-16 overflow-hidden",
+      "key_elements": [
+        "Interactive R3F WebGL Canvas background with distorted iridescent sphere",
+        "Editorial Serif headline: 'Strategy. Creativity. Technology. In service of outcomes.'",
+        "Primary CTA button: 'Initiate Collaboration' with magnetic effect",
+        "Scroll cue indicator with slow pulse dot"
+      ]
+    },
+    {
+      "id": "manifesto",
+      "number": "03",
+      "title": "About & Manifesto",
+      "layout": "Two-column editorial layout (left sticky section label, right kinetic chapters)",
+      "key_elements": [
+        "Kinetic scroll-triggered line-by-line text reveal",
+        "4 Numbered Manifesto Chapters: [01: Radical Outcome Focus, 02: Precision over Noise, 03: Architectural Rigor, 04: Human-Centric Futures]",
+        "3D Typographic interactive floating flourish"
+      ]
+    },
+    {
+      "id": "services",
+      "number": "04",
+      "title": "Interactive Stacked Services",
+      "layout": "Vertical stacked sticky cards with z-index elevation",
+      "cards": [
+        {
+          "name": "Brand Strategy",
+          "vignette": "Abstract kinetic grid animation",
+          "description": "Formulating category-defining identity, positioning, and narrative systems."
+        },
+        {
+          "name": "Digital Marketing",
+          "vignette": "Waveform flow particle canvas",
+          "description": "High-velocity customer acquisition through content and data intelligence."
+        },
+        {
+          "name": "Web Development",
+          "vignette": "Interactive 3D wireframe mesh",
+          "description": "Bespoke digital engines built with WebGL, React, and sub-second architecture."
+        },
+        {
+          "name": "Automation",
+          "vignette": "Node network pulse diagram",
+          "description": "Streamlining operational flows through algorithmic agency pipelines."
+        },
+        {
+          "name": "Consulting",
+          "vignette": "Rotating geometric polyhedron",
+          "description": "C-suite advisory on digital transformation and technical strategy."
+        }
+      ]
+    },
+    {
+      "id": "case_studies",
+      "number": "05",
+      "title": "Horizontal Case Gallery",
+      "layout": "GSAP ScrollTrigger pinned horizontal scroll-jack container",
+      "projects": [
+        {
+          "id": "sample-work-1",
+          "title": "AURA AI — NextGen Intelligence Portal",
+          "category": "Brand Strategy & Web Platform",
+          "year": "2026",
+          "image_url": "https://images.unsplash.com/photo-1653299832314-5d3dc1e5a83c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwM2QlMjBhYnN0cmFjdCUyMGFydHdvcmslMjBkYXJrJTIwYmx1ZSUyMGFlc3RoZXRpY3xlbnwwfHx8fDE3ODY2NDk0NjZ8MA&ixlib=rb-4.1.0&q=85",
+          "badge": "sample work"
+        },
+        {
+          "id": "sample-work-2",
+          "title": "KINETIK — High-Velocity Trading Interface",
+          "category": "Web Development & Fintech",
+          "year": "2026",
+          "image_url": "https://images.unsplash.com/photo-1650943574955-ac02c65cfc71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwyfHxmdXR1cmlzdGljJTIwM2QlMjBhYnN0cmFjdCUyMGFydHdvcmslMjBkYXJrJTIwYmx1ZSUyMGFlc3RoZXRpY3xlbnwwfHx8fDE3ODY2NDk0NjZ8MA&ixlib=rb-4.1.0&q=85",
+          "badge": "sample work"
+        },
+        {
+          "id": "sample-work-3",
+          "title": "NOVA ARCHITECTURE — Spatial Design Collective",
+          "category": "Editorial Brand Identity",
+          "year": "2025",
+          "image_url": "https://images.unsplash.com/photo-1548430077-773fa74bda9d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwZGlnaXRhbCUyMGFnZW5jeSUyMGJyYW5kJTIwaWRlbnRpdHklMjBkZXNpZ24lMjBlZGl0b3JpYWwlMjBwb3J0Zm9saW98ZW58MHx8fHwxNzg2NjQ5NDU4fDA&ixlib=rb-4.1.0&q=85",
+          "badge": "sample work"
+        },
+        {
+          "id": "sample-work-4",
+          "title": "LUMEN HEALTH — Biometric Diagnostics UI",
+          "category": "Automation & Web App",
+          "year": "2025",
+          "image_url": "https://images.unsplash.com/photo-1657632843433-e6a8b7451ac6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHw0fHxmdXR1cmlzdGljJTIwM2QlMjBhYnN0cmFjdCUyMGFydHdvcmslMjBkYXJrJTIwYmx1ZSUyMGFlc3RoZXRpY3xlbnwwfHx8fDE3ODY2NDk0NjZ8MA&ixlib=rb-4.1.0&q=85",
+          "badge": "sample work"
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "number": "06",
+      "title": "Low-Friction Contact",
+      "layout": "Clean asymmetric split container (Left narrative CTA, Right high-contrast form)",
+      "fields": ["Name", "Email Address", "Project Overview / Message"],
+      "interactive_features": [
+        "Animated border glow on focus",
+        "Magnetic submission button",
+        "Interactive 3D particle burst flourish on successful form submission"
+      ]
+    },
+    {
+      "id": "footer",
+      "number": "07",
+      "title": "Creative Footer",
+      "layout": "Full width dark base (#060814) with oversized kinetic typography",
+      "key_elements": [
+        "Oversized animated 'KURIETA' wordmark filling width",
+        "Navigation links with line fill hover state",
+        "Social channels: Twitter/X, LinkedIn, GitHub, Instagram",
+        "Back to top button with elastic ease (cubic-bezier(0.68, -0.6, 0.32, 1.6))"
+      ]
+    }
+  ],
+  "testing_requirements": {
+    "rule": "Every interactive and key informational element MUST include a data-testid attribute in kebab-case format.",
+    "required_ids": [
+      "preloader-container",
+      "preloader-wordmark",
+      "preloader-counter",
+      "navbar-brand-logo",
+      "navbar-nav-link-manifesto",
+      "navbar-nav-link-services",
+      "navbar-nav-link-cases",
+      "navbar-nav-link-contact",
+      "hero-headline",
+      "hero-primary-cta",
+      "hero-scroll-cue",
+      "manifesto-chapter-1",
+      "manifesto-chapter-2",
+      "manifesto-chapter-3",
+      "manifesto-chapter-4",
+      "services-card-0",
+      "services-card-1",
+      "services-card-2",
+      "services-card-3",
+      "services-card-4",
+      "case-study-card-0",
+      "case-study-card-1",
+      "case-study-card-2",
+      "case-study-card-3",
+      "contact-form",
+      "contact-input-name",
+      "contact-input-email",
+      "contact-textarea-message",
+      "contact-submit-button",
+      "contact-success-message",
+      "footer-wordmark",
+      "footer-back-to-top-button"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Ensure Lenis smooth scroll and GSAP ScrollTrigger ticker are synced properly using requestAnimationFrame.",
+    "Do NOT use pure #000000. Use #0A0E1F for page background and #060814 for preloader/footer surfaces.",
+    "Implement magnetic cursor component using Framer Motion spring physics.",
+    "Use data-testid on all interactive buttons, links, form fields, cards, and section titles.",
+    "Ensure dark theme styles are applied cleanly with high APCA contrast ratios."
+  ]
+}
