@@ -9,8 +9,10 @@ import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { Marquee } from './components/Marquee'
 import { Manifesto } from './components/Manifesto'
+import { Process } from './components/Process'
 import { Services } from './components/Services'
 import { CaseStudies } from './components/CaseStudies'
+import { Stats } from './components/Stats'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 
@@ -51,8 +53,10 @@ export default function App() {
         <Hero started={loaded} reduced={reduced} />
         <Marquee />
         <Manifesto reduced={reduced} />
+        <Process reduced={reduced} />
         <Services reduced={reduced} />
         <CaseStudies reduced={reduced} />
+        <Stats reduced={reduced} />
         <Contact reduced={reduced} />
       </main>
       <Footer reduced={reduced} />
