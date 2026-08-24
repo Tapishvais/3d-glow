@@ -1,8 +1,8 @@
 // Vercel Edge Function — contact form → Resend
 // Required env vars in Vercel project settings:
 //   RESEND_API_KEY  — from resend.com
-//   CONTACT_EMAIL   — inbox that receives enquiries (e.g. hello@kurieta.com)
-//   EMAIL_FROM      — verified sender, e.g. "Kurieta <hello@yourdomain.com>"
+//   CONTACT_EMAIL   — inbox that receives enquiries
+//   EMAIL_FROM      — verified sender, e.g. "3D Glow <hello@yourdomain.com>"
 
 export const config = { runtime: 'edge' }
 
@@ -23,11 +23,11 @@ export default async function handler(req) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: process.env.EMAIL_FROM || 'Kurieta <hello@kurieta.com>',
-        to: [process.env.CONTACT_EMAIL || 'hello@kurieta.com'],
+        from: process.env.EMAIL_FROM || '3D Glow <hello@3dglow.dev>',
+        to: [process.env.CONTACT_EMAIL || 'hello@3dglow.dev'],
         reply_to: email,
         subject: `New enquiry — ${String(name).replace(/[\r\n]+/g, ' ').slice(0, 80)}`,
-        html: `<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:32px;font-family:Arial,sans-serif;background:#0A0E1F;color:#F6F7FC"><p style="font-size:11px;letter-spacing:3px;color:#3D5CFF;text-transform:uppercase">Kurieta — New enquiry</p><p style="font-size:20px;font-weight:600">${esc(String(name))}</p><p><a href="mailto:${esc(String(email))}" style="color:#3D5CFF">${esc(String(email))}</a></p><p style="line-height:1.7;white-space:pre-wrap">${esc(String(message))}</p><hr style="border:none;border-top:1px solid #1A2247;margin:28px 0"><p style="font-size:11px;color:#8a8fa8">Sent by the Kurieta website contact form · <a href="https://kurieta.com" style="color:#8a8fa8">kurieta.com</a></p></td></tr></table>`,
+        html: `<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:32px;font-family:Arial,sans-serif;background:#0A0E1F;color:#F6F7FC"><p style="font-size:11px;letter-spacing:3px;color:#3D5CFF;text-transform:uppercase">3D Glow — New enquiry</p><p style="font-size:20px;font-weight:600">${esc(String(name))}</p><p><a href="mailto:${esc(String(email))}" style="color:#3D5CFF">${esc(String(email))}</a></p><p style="line-height:1.7;white-space:pre-wrap">${esc(String(message))}</p><hr style="border:none;border-top:1px solid #1A2247;margin:28px 0"><p style="font-size:11px;color:#8a8fa8">Sent by the 3D Glow contact form</p></td></tr></table>`,
       }),
     })
     if (!res.ok) return Response.json({ error: 'Send failed' }, { status: 502 })

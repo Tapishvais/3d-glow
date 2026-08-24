@@ -12,38 +12,38 @@ interface Service {
 
 const SERVICES: Service[] = [
   {
-    name: 'Brand Strategy',
-    tag: 'Positioning · Identity · Narrative',
+    name: '3D Websites',
+    tag: 'Three.js · WebGL · Shaders',
     description:
-      'Category-defining identity systems — research-backed positioning, naming, and narrative architecture that make the comparison set irrelevant.',
+      'Real 3D in the browser — shapes, light, and shaders that move with the mouse and the scroll.',
     vignette: 'grid',
   },
   {
-    name: 'Digital Marketing',
-    tag: 'SEO · Content · Paid Growth',
+    name: 'Scroll Motion',
+    tag: 'GSAP · Lenis · Story',
     description:
-      'High-velocity acquisition engines. Full-funnel campaigns held accountable to revenue, never to vanity metrics.',
+      'Pages that unfold as you scroll. Not random effects — a path from the first screen to the last.',
     vignette: 'wave',
   },
   {
-    name: 'Web Development',
-    tag: 'React · WebGL · Headless',
+    name: 'Frontend',
+    tag: 'React · Vite · TypeScript',
     description:
-      'Bespoke digital platforms with sub-second architecture — marketing sites and product experiences engineered like software.',
+      'Clean components, fast builds, and a layout that works on phone and desktop.',
     vignette: 'mesh',
   },
   {
-    name: 'Automation',
-    tag: 'Workflows · Integrations · AI Ops',
+    name: 'Canvas Art',
+    tag: 'No photos · All code',
     description:
-      'Operational leverage through algorithmic pipelines. We remove the manual work your team should never have been doing.',
+      'Backgrounds and project art drawn in code so the page stays light and original.',
     vignette: 'nodes',
   },
   {
-    name: 'Consulting',
-    tag: 'Strategy · Audits · Advisory',
+    name: 'Performance',
+    tag: 'Lazy 3D · Mobile · Access',
     description:
-      'Senior counsel for digital transformation — technical due diligence, roadmap design, and team enablement.',
+      'Heavy 3D loads late, pauses off-screen, and calms down if you prefer less motion.',
     vignette: 'poly',
   },
 ]
@@ -124,11 +124,11 @@ export function Services({ reduced }: { reduced: boolean }) {
             03 — Services
           </p>
           <h2 className="font-serif text-2xl leading-[1.15] tracking-tight text-paper sm:text-3xl lg:text-4xl">
-            Capabilities, stacked.
+            What I like to build
           </h2>
         </div>
         <p className="max-w-xs text-sm leading-relaxed text-white/55">
-          Five disciplines, one integrated team. Hover a card to see it breathe.
+          Five skills behind this page. Hover a card to see it move.
         </p>
       </div>
 

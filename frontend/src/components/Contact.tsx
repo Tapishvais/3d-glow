@@ -73,7 +73,7 @@ export function Contact({ reduced }: { reduced: boolean }) {
       setStatus('success')
     } catch {
       setStatus('idle')
-      toast.error('Could not send your message — email us directly at hello@kurieta.com')
+      toast.error('Could not send your message — try GitHub: github.com/Tapishvais')
     }
   }
 
@@ -88,20 +88,22 @@ export function Contact({ reduced }: { reduced: boolean }) {
             05 — Contact
           </p>
           <h2 className="font-serif text-2xl leading-[1.15] tracking-tight text-paper sm:text-3xl lg:text-5xl">
-            Let&rsquo;s build something <em className="italic text-electric">undeniable.</em>
+            Let&rsquo;s build something <em className="italic text-electric">that glows.</em>
           </h2>
           <p className="mt-8 max-w-md text-sm leading-relaxed text-white/55 md:text-base">
-            Tell us where you&rsquo;re headed. We&rsquo;ll tell you honestly whether we&rsquo;re the right team to get
-            you there — and exactly how.
+            This is a personal project. If you want to talk about 3D sites or frontend work, send a note — or find me
+            on GitHub.
           </p>
           <a
-            href="mailto:hello@kurieta.com"
+            href="https://github.com/Tapishvais"
+            target="_blank"
+            rel="noreferrer"
             data-testid="contact-email-link"
             className="nav-link mt-10 inline-block font-mono text-sm tracking-[0.15em] text-paper"
           >
-            hello@kurieta.com
+            github.com/Tapishvais
           </a>
-          <p className="mono-label mt-6">Replies within 24 hours</p>
+          <p className="mono-label mt-6">Personal project · 2026</p>
         </div>
 
         <div className="relative min-h-[26rem]">
@@ -118,7 +120,7 @@ export function Contact({ reduced }: { reduced: boolean }) {
                 {!reduced && <SuccessBurst />}
                 {reduced && <Check className="mb-6 h-10 w-10 text-electric" aria-hidden />}
                 <h3 className="font-serif text-3xl tracking-tight text-paper">Message received.</h3>
-                <p className="mono-label mt-4">We reply within 24 hours</p>
+                <p className="mono-label mt-4">Thanks for writing</p>
                 <button
                   data-testid="contact-send-another-button"
                   onClick={() => {

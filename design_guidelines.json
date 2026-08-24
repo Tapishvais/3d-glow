@@ -1,8 +1,8 @@
 {
   "brand": {
-    "name": "Kurieta",
-    "domain": "kurieta.com",
-    "tagline": "Strategy. Creativity. Technology. In service of outcomes.",
+    "name": "3D Glow",
+    "domain": "3dglow.dev",
+    "tagline": "3D. Motion. Web. Made to glow.",
     "archetype": "LUXURY_DIGITAL_ARCHITECT",
     "theme_mode": "dark_only"
   },
@@ -80,7 +80,7 @@
       "title": "Branded Pre-loader",
       "layout": "Fixed fullscreen overlay z-50 bg-[#060814]",
       "key_elements": [
-        "Kurieta SVG wordmark with animated stroke-dasharray",
+        "3D Glow SVG wordmark with animated stroke-dasharray",
         "Digital counter incrementing to 100 in mono font",
         "Mask-reveal vertical shutter handoff"
       ]
@@ -92,7 +92,7 @@
       "layout": "Relative h-screen w-full flex flex-col justify-between p-8 md:p-16 overflow-hidden",
       "key_elements": [
         "Interactive R3F WebGL Canvas background with distorted iridescent sphere",
-        "Editorial Serif headline: 'Strategy. Creativity. Technology. In service of outcomes.'",
+        "Editorial Serif headline: '3D. Motion. Web. Made to glow.'",
         "Primary CTA button: 'Initiate Collaboration' with magnetic effect",
         "Scroll cue indicator with slow pulse dot"
       ]
@@ -115,27 +115,27 @@
       "layout": "Vertical stacked sticky cards with z-index elevation",
       "cards": [
         {
-          "name": "Brand Strategy",
+          "name": "3D Websites",
           "vignette": "Abstract kinetic grid animation",
           "description": "Formulating category-defining identity, positioning, and narrative systems."
         },
         {
-          "name": "Digital Marketing",
+          "name": "Scroll Motion",
           "vignette": "Waveform flow particle canvas",
           "description": "High-velocity customer acquisition through content and data intelligence."
         },
         {
-          "name": "Web Development",
+          "name": "Frontend",
           "vignette": "Interactive 3D wireframe mesh",
           "description": "Bespoke digital engines built with WebGL, React, and sub-second architecture."
         },
         {
-          "name": "Automation",
+          "name": "Canvas Art",
           "vignette": "Node network pulse diagram",
           "description": "Streamlining operational flows through algorithmic agency pipelines."
         },
         {
-          "name": "Consulting",
+          "name": "Performance",
           "vignette": "Rotating geometric polyhedron",
           "description": "C-suite advisory on digital transformation and technical strategy."
         }
@@ -150,7 +150,7 @@
         {
           "id": "sample-work-1",
           "title": "AURA AI — NextGen Intelligence Portal",
-          "category": "Brand Strategy & Web Platform",
+          "category": "3D Web · Portal",
           "year": "2026",
           "image_url": "https://images.unsplash.com/photo-1653299832314-5d3dc1e5a83c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwM2QlMjBhYnN0cmFjdCUyMGFydHdvcmslMjBkYXJrJTIwYmx1ZSUyMGFlc3RoZXRpY3xlbnwwfHx8fDE3ODY2NDk0NjZ8MA&ixlib=rb-4.1.0&q=85",
           "badge": "sample work"

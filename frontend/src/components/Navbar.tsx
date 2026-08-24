@@ -42,7 +42,7 @@ export function Navbar({ visible }: { visible: boolean }) {
           onClick={go('#top')}
           className="font-serif text-xl tracking-tight text-paper"
         >
-          Kurieta<span className="text-electric">®</span>
+          3D Glow
         </a>
         <div className="hidden items-center gap-10 md:flex">
           {LINKS.map((l) => (
@@ -88,7 +88,7 @@ export function Navbar({ visible }: { visible: boolean }) {
           >
             <div className="flex items-center justify-between">
               <span className="font-serif text-xl tracking-tight text-paper">
-                Kurieta<span className="text-electric">®</span>
+                3D Glow
               </span>
               <button
                 data-testid="navbar-mobile-close-button"
@@ -132,11 +132,13 @@ export function Navbar({ visible }: { visible: boolean }) {
               </motion.button>
             </nav>
             <a
-              href="mailto:hello@kurieta.com"
+              href="https://github.com/Tapishvais"
+              target="_blank"
+              rel="noreferrer"
               data-testid="navbar-mobile-email"
               className="font-mono text-sm tracking-[0.15em] text-white/55"
             >
-              hello@kurieta.com
+              github.com/Tapishvais
             </a>
           </motion.div>
         )}

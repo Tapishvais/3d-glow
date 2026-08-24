@@ -5,28 +5,28 @@ import { gsap } from '../lib/scroll'
 const CHAPTERS = [
   {
     n: '01',
-    title: 'Radical Outcome Focus',
-    body: 'Every pixel, line of code, and campaign is accountable to a measurable business result. Aesthetics are the vehicle; outcomes are the destination.',
+    title: 'Motion with a reason',
+    body: 'Animation should help you feel the page, not slow it down. Every move has a job.',
   },
   {
     n: '02',
-    title: 'Precision over Noise',
-    body: 'We subtract until only the essential remains. Clarity converts where decoration distracts.',
+    title: 'Keep it light',
+    body: 'If it does not help the story, it goes. Fast pages feel more premium than heavy ones.',
   },
   {
     n: '03',
-    title: 'Architectural Rigor',
-    body: 'Sub-second loads, semantic markup, resilient systems. The craft beneath the surface is what compounds.',
+    title: 'Drawn in code',
+    body: 'The 3D blob, the art, the glow — all built in the browser. No stock photos.',
   },
   {
     n: '04',
-    title: 'Human-Centric Futures',
-    body: 'Technology should feel inevitable and humane. We build for the person on the other side of the screen.',
+    title: 'Feels good to use',
+    body: 'Works on phone and desktop. If you prefer less motion, the page stays calm.',
   },
 ]
 
 const KINETIC =
-  'Kurieta is a boutique consulting, branding, marketing, and technology partner — working as an extension of your team to deliver results that matter.'
+  '3D Glow is my personal project — a 3D animated homepage I built to practice WebGL, scroll motion, and fast frontend craft.'
 
 function KineticText({ text, reduced }: { text: string; reduced: boolean }) {
   const ref = useRef<HTMLParagraphElement>(null)
@@ -76,7 +76,7 @@ export function Manifesto({ reduced }: { reduced: boolean }) {
           className="k-spin block font-serif text-[11rem] leading-none text-depth-3"
           style={{ transformStyle: 'preserve-3d', textShadow: '0 0 90px rgba(61,92,255,0.22)' }}
         >
-          K
+          G
         </span>
       </div>
 
@@ -87,17 +87,16 @@ export function Manifesto({ reduced }: { reduced: boolean }) {
               02 — About / Manifesto
             </p>
             <h2 className="font-serif text-2xl leading-[1.15] tracking-tight text-paper sm:text-3xl lg:text-4xl">
-              The principles
+              Why I built
               <br />
-              we build on.
+              3D Glow.
             </h2>
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-white/55">
-              Not an outside agency — an extension of your team. Four commitments, held without exception, on
-              every engagement we accept.
+              A one-page experiment in 3D and motion. Four rules I tried to follow while making it.
             </p>
             <div className="mt-10 space-y-2">
-              <p className="mono-label">Est. 2015 — Indianapolis</p>
-              <p className="mono-label">US · India · Canada · UK</p>
+              <p className="mono-label">Personal project — 2026</p>
+              <p className="mono-label">React · Three.js · GSAP</p>
             </div>
           </div>
         </div>

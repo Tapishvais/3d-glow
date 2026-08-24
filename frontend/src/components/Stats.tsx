@@ -2,10 +2,10 @@ import { useEffect, useRef } from 'react'
 import { gsap } from '../lib/scroll'
 
 const STATS = [
-  { value: 10, suffix: '+', label: 'Years building brands' },
-  { value: 4, suffix: '', label: 'Countries, one team' },
-  { value: 5, suffix: '', label: 'Disciplines under one roof' },
-  { value: 24, suffix: 'h', label: 'Response time, always' },
+  { value: 3, suffix: 'D', label: 'Shader in the hero' },
+  { value: 0, suffix: '', label: 'Stock photos used' },
+  { value: 8, suffix: '', label: 'Animated sections' },
+  { value: 1, suffix: '', label: 'Personal project' },
 ]
 
 export function Stats({ reduced }: { reduced: boolean }) {
@@ -38,7 +38,7 @@ export function Stats({ reduced }: { reduced: boolean }) {
     <section
       data-testid="stats-strip"
       className="border-y border-white/5 bg-depth-1/40 px-6 py-16 md:px-12 md:py-20"
-      aria-label="Company statistics"
+      aria-label="Project statistics"
     >
       <div className="grid grid-cols-2 gap-10 lg:grid-cols-4">
         {STATS.map((s, i) => (

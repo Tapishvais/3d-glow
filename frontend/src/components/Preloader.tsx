@@ -46,10 +46,10 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
       className="fixed inset-0 z-[150] flex items-center justify-center bg-depth-1"
       style={{ clipPath: 'inset(0% 0% 0% 0%)' }}
       role="status"
-      aria-label="Loading Kurieta"
+      aria-label="Loading 3D Glow"
     >
       <div className="absolute left-6 top-6 md:left-12 md:top-10">
-        <span className="mono-label">Kurieta® — Digital Agency</span>
+        <span className="mono-label">3D Glow — Personal Project</span>
       </div>
       <div className="absolute right-6 top-6 md:right-12 md:top-10">
         <span className="mono-label">©2026</span>
@@ -59,11 +59,11 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
         data-testid="preloader-wordmark"
         viewBox="0 0 640 130"
         className="w-[min(72vw,560px)]"
-        aria-label="Kurieta"
+        aria-label="3D Glow"
         role="img"
       >
-        <text x="50%" y="74%" textAnchor="middle" fontSize="98" className="preloader-text">
-          KURIETA
+        <text x="50%" y="74%" textAnchor="middle" fontSize="72" className="preloader-text">
+          3D GLOW
         </text>
       </svg>
 

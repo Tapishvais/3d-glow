@@ -70,8 +70,8 @@ export function Hero({ started, reduced }: { started: boolean; reduced: boolean 
 
       <div className="pointer-events-none relative z-10 flex h-full flex-col justify-between px-6 pb-10 pt-28 md:px-12 md:pb-12">
         <div ref={metaRef} className="flex items-start justify-between">
-          <p className="mono-label opacity-0">Boutique Digital Agency</p>
-          <p className="mono-label hidden opacity-0 md:block">Indianapolis — Worldwide</p>
+          <p className="mono-label opacity-0">Personal 3D Project</p>
+          <p className="mono-label hidden opacity-0 md:block">Built with Three.js</p>
         </div>
 
         <div>
@@ -81,22 +81,22 @@ export function Hero({ started, reduced }: { started: boolean; reduced: boolean 
           >
             <span className="block overflow-hidden pb-1">
               <span ref={(el) => (linesRef.current[0] = el)} className="block will-change-transform" style={lineStyle}>
-                Strategy.
+                3D.
               </span>
             </span>
             <span className="block overflow-hidden pb-1">
               <span ref={(el) => (linesRef.current[1] = el)} className="block will-change-transform" style={lineStyle}>
-                Creativity.
+                Motion.
               </span>
             </span>
             <span className="block overflow-hidden pb-1">
               <span ref={(el) => (linesRef.current[2] = el)} className="block will-change-transform" style={lineStyle}>
-                Technology.
+                Web.
               </span>
             </span>
             <span className="block overflow-hidden pb-2">
               <span ref={(el) => (linesRef.current[3] = el)} className="block will-change-transform" style={lineStyle}>
-                In service of <em className="italic text-crimson">outcomes.</em>
+                Made to <em className="italic text-crimson">glow.</em>
               </span>
             </span>
           </h1>
@@ -110,7 +110,7 @@ export function Hero({ started, reduced }: { started: boolean; reduced: boolean 
                 onClick={() => scrollTo('#contact', { duration: 1.8 })}
                 className="group flex items-center gap-4 rounded-full border border-electric/60 px-8 py-4 font-mono text-xs uppercase tracking-[0.22em] text-paper transition-colors duration-500 ease-weighted hover:bg-electric"
               >
-                Initiate Collaboration
+                Say Hello
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-electric transition-colors duration-500 group-hover:bg-paper" />
               </button>
             </Magnetic>

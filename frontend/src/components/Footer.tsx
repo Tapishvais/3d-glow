@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowUp, Globe, Linkedin, Mail, Phone } from 'lucide-react'
+import { ArrowUp, Github, Globe } from 'lucide-react'
 import { elasticOut, scrollTo } from '../lib/scroll'
 
 const NAV = [
@@ -10,14 +10,12 @@ const NAV = [
 ]
 
 const SOCIALS = [
-  { label: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/kurieta', testId: 'footer-social-linkedin' },
-  { label: 'Email', icon: Mail, href: 'mailto:info@kurieta.com', testId: 'footer-social-email' },
-  { label: 'Phone', icon: Phone, href: 'tel:+18778557799', testId: 'footer-social-phone' },
-  { label: 'Website', icon: Globe, href: 'https://kurieta.com', testId: 'footer-social-website' },
+  { label: 'GitHub', icon: Github, href: 'https://github.com/Tapishvais', testId: 'footer-social-github' },
+  { label: 'Live site', icon: Globe, href: 'https://3d-glow.vercel.app', testId: 'footer-social-website' },
 ]
 
 export function Footer({ reduced }: { reduced: boolean }) {
-  const letters = 'KURIETA'.split('')
+  const letters = '3D GLOW'.split('')
 
   const go = (href: string) => (e: React.MouseEvent) => {
     e.preventDefault()
@@ -32,8 +30,8 @@ export function Footer({ reduced }: { reduced: boolean }) {
           initial={reduced ? false : 'hidden'}
           whileInView="show"
           viewport={{ once: true, amount: 0.4 }}
-          className="select-none whitespace-nowrap font-serif text-[clamp(4rem,16.5vw,15rem)] leading-none tracking-tight text-paper"
-          aria-label="Kurieta"
+          className="select-none whitespace-nowrap font-serif text-[clamp(3rem,14vw,12rem)] leading-none tracking-tight text-paper"
+          aria-label="3D Glow"
         >
           {letters.map((l, i) => (
             <span key={i} className="inline-block overflow-hidden pb-2">
@@ -44,11 +42,10 @@ export function Footer({ reduced }: { reduced: boolean }) {
                 }}
                 className="inline-block cursor-default transition-colors duration-300 hover:text-electric"
               >
-                {l}
+                {l === ' ' ? '\u00a0' : l}
               </motion.span>
             </span>
           ))}
-          <span className="inline-block align-top font-mono text-[clamp(0.8rem,2vw,1.5rem)] text-electric">®</span>
         </motion.h2>
       </div>
 
@@ -68,28 +65,23 @@ export function Footer({ reduced }: { reduced: boolean }) {
         </nav>
 
         <div className="flex flex-col gap-4">
-          <p className="mono-label">Start a conversation</p>
+          <p className="mono-label">Find me</p>
           <a
-            href="mailto:hello@kurieta.com"
+            href="https://github.com/Tapishvais"
+            target="_blank"
+            rel="noreferrer"
             data-testid="footer-email-link"
             className="nav-link w-fit font-mono text-sm tracking-[0.15em] text-paper"
           >
-            hello@kurieta.com
-          </a>
-          <a
-            href="mailto:info@kurieta.com"
-            data-testid="footer-info-email-link"
-            className="nav-link w-fit font-mono text-sm tracking-[0.15em] text-white/55 transition-colors duration-300 hover:text-paper"
-          >
-            info@kurieta.com
+            github.com/Tapishvais
           </a>
           <div className="mt-2 flex items-center gap-4">
             {SOCIALS.map((s) => (
               <a
                 key={s.label}
                 href={s.href}
-                target={s.href.startsWith('http') ? '_blank' : undefined}
-                rel={s.href.startsWith('http') ? 'noreferrer' : undefined}
+                target="_blank"
+                rel="noreferrer"
                 data-testid={s.testId}
                 aria-label={s.label}
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white/60 transition-colors duration-500 ease-weighted hover:border-electric hover:bg-electric hover:text-paper"
@@ -112,9 +104,9 @@ export function Footer({ reduced }: { reduced: boolean }) {
 
       <div className="mt-16 flex flex-col justify-between gap-3 border-t border-white/5 pt-8 md:flex-row md:items-center">
         <p className="mono-label" data-testid="footer-copyright">
-          © 2026 Kurieta — All case studies are sample concepts
+          © 2026 3D Glow — Personal project · sample work only
         </p>
-        <p className="mono-label">Strategy · Creativity · Technology</p>
+        <p className="mono-label">3D · Motion · Web</p>
       </div>
     </footer>
   )

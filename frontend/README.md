@@ -1,4 +1,4 @@
-# Kurieta — Frontend
+# 3D Glow — Frontend
 
 This folder is the whole site and the Vercel project root. **See the [root README](../README.md)** for the full write-up (stack choices, trade-offs, performance, accessibility).
 

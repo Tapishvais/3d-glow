@@ -1,4 +1,4 @@
-const WORDS = ['Strategy', 'Creativity', 'Technology', 'Outcomes']
+const WORDS = ['3D', 'Glow', 'Motion', 'Web']
 
 export function Marquee() {
   const row = [...WORDS, ...WORDS, ...WORDS]

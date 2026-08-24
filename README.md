@@ -1,16 +1,16 @@
-# Kurieta — 3D Animated Homepage
+# 3D Glow — Personal 3D Homepage
 
-A single-page, fully 3D-animated homepage for **kurieta.com**, built from a blank canvas for the Kurieta Full-Stack Developer assignment.
+A single-page, 3D-animated homepage I built as a **personal project** — React, Three.js, and scroll motion.
 
-**Live:** [https://kurieta.vercel.app](https://kurieta.vercel.app)  
-**Source:** [github.com/Tapishvais/Kurieta](https://github.com/Tapishvais/Kurieta)
+**Live:** [https://3d-glow.vercel.app](https://3d-glow.vercel.app)  
+**Source:** [github.com/Tapishvais/3d-glow](https://github.com/Tapishvais/3d-glow)
 
 ## What the page does
 
 - Opens with a **fast branded pre-loader** (under 2 seconds) that melts into the hero without a cut
 - The hero has a **real 3D blob** built with a custom shader — it follows your cursor and reacts to how fast you scroll
-- Every section **animates as you scroll**: about / manifesto → process → services → case studies → stats → contact → footer
-- The **contact form is wired to send email** (Resend on Vercel; needs `RESEND_API_KEY` in project env)
+- Every section **animates as you scroll**: about → process → skills → sample work → stats → contact → footer
+- The **contact form can send email** (Resend on Vercel; needs `RESEND_API_KEY` in project env)
 - Works on **desktop, tablet, and mobile**, and respects reduced-motion settings
 
 ## Tech stack (and why)
@@ -18,18 +18,18 @@ A single-page, fully 3D-animated homepage for **kurieta.com**, built from a blan
 | Tool | Why I chose it |
 |---|---|
 | React + TypeScript + Vite | One page doesn't need Next.js — Vite is faster to build and lighter to ship |
-| Three.js + custom GLSL shader | The hero blob — real 3D that responds to the user, per the brief |
+| Three.js + custom GLSL shader | The hero blob — real 3D that responds to the user |
 | GSAP + ScrollTrigger | Scroll-driven section choreography |
 | Framer Motion | Small UI touches — magnetic buttons, custom cursor |
 | Lenis | Smooth, weighted scrolling |
-| Tailwind CSS | Fast, consistent styling with the brand palette as tokens |
+| Tailwind CSS | Fast, consistent styling with a dark brand palette |
 | Resend | Sends contact form emails through one tiny serverless function |
 
 ## Trade-offs I made
 
-- **All visuals are drawn in code** (canvas), no photos — the page downloads zero images, stays fast, and never fakes client work (every project is labeled "Sample Work")
-- **Only one section uses horizontal scroll-locking** (case studies) — locking the whole page would feel laggy
-- **No extra pages, no dark/light toggle** — the brief asked for "a smaller set of ideas executed beautifully"
+- **All visuals are drawn in code** (canvas), no photos — the page downloads zero images and stays fast (sample work is labeled as samples)
+- **Only one section uses horizontal scroll-locking** (work) — locking the whole page would feel laggy
+- **No extra pages, no dark/light toggle** — a smaller set of ideas, finished well
 
 ## Performance (measured)
 
@@ -55,14 +55,14 @@ Production build: `yarn build`
 
 ## Deploy to Vercel
 
-Root Directory is `frontend`. Live production URL: [kurieta.vercel.app](https://kurieta.vercel.app).
+Root Directory is `frontend`. Live URL: [3d-glow.vercel.app](https://3d-glow.vercel.app).
 
 To make the contact form send mail, add `RESEND_API_KEY`, `CONTACT_EMAIL`, and `EMAIL_FROM`. `frontend/api/contact.js` handles the rest.
 
-(`backend/` only exists so the contact form works in my dev preview — it is not part of the production deploy.)
+(`backend/` only exists for a local/dev contact preview — it is not part of the production deploy.)
 
 ## What I'd improve with more time
 
 - Drive the pre-loader from real loading progress instead of a timer
-- Full case-study detail pages for each project
+- Full detail pages for each sample project
 - Lighthouse CI on every commit so performance never regresses

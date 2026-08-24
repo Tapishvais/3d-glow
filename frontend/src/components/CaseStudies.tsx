@@ -18,7 +18,7 @@ const PROJECTS: Project[] = [
   {
     title: 'Aura AI',
     subtitle: 'Next-Gen Intelligence Portal',
-    category: 'Brand Strategy · Web Platform',
+    category: '3D Web · Portal',
     year: '2026',
     variant: 'orb',
     colors: ['#3D5CFF', '#8FA2FF', '#0A0E1F'],
@@ -26,7 +26,7 @@ const PROJECTS: Project[] = [
   {
     title: 'Kinetik',
     subtitle: 'High-Velocity Trading Interface',
-    category: 'Web Development · Fintech',
+    category: 'Motion · Fintech UI',
     year: '2026',
     variant: 'chart',
     colors: ['#3D5CFF', '#FF2D62', '#060814'],
@@ -34,7 +34,7 @@ const PROJECTS: Project[] = [
   {
     title: 'Nova Studio',
     subtitle: 'Spatial Design Collective',
-    category: 'Editorial Brand Identity',
+    category: '3D · Visual identity',
     year: '2025',
     variant: 'editorial',
     colors: ['#8FA2FF', '#3D5CFF', '#121833'],
@@ -42,7 +42,7 @@ const PROJECTS: Project[] = [
   {
     title: 'Lumen Health',
     subtitle: 'Biometric Diagnostics UI',
-    category: 'Automation · Web App',
+    category: 'UI · Animation',
     year: '2025',
     variant: 'pulse',
     colors: ['#FF2D62', '#3D5CFF', '#0A0E1F'],
@@ -121,13 +121,13 @@ export function CaseStudies({ reduced }: { reduced: boolean }) {
             04 — Selected Work
           </p>
           <h2 className="font-serif text-2xl leading-[1.15] tracking-tight text-paper sm:text-3xl lg:text-4xl">
-            Concept case studies,
+            Sample 3D concepts,
             <br />
-            crafted end to end.
+            made to show the look.
           </h2>
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/55">
-            Every project shown is a <span className="text-paper">sample concept</span> — designed and built in-house
-            to demonstrate craft. No client claims, no borrowed logos.
+            These are <span className="text-paper">sample ideas</span> — not real client work. I designed them to show
+            motion and art, not to fake a company portfolio.
           </p>
           <p className="mono-label mt-10 hidden lg:block">Scroll →</p>
         </div>

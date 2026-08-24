@@ -4,28 +4,28 @@ import { gsap } from '../lib/scroll'
 const STEPS = [
   {
     n: '01',
-    title: 'Embed',
-    body: 'We start inside your business — goals, constraints, customers. No briefs thrown over a wall.',
+    title: 'Sketch',
+    body: 'I start with the feel — dark, slow, a little glow. Then I write down what each section should do.',
   },
   {
     n: '02',
-    title: 'Define',
-    body: 'Strategy first: positioning, roadmap, and the measurable outcome every decision answers to.',
+    title: 'Build',
+    body: 'React for the page. Three.js for the 3D blob. GSAP for scroll. One file at a time.',
   },
   {
     n: '03',
-    title: 'Design & Build',
-    body: 'Senior designers and engineers in the same room, shipping in tight weekly cycles with your team.',
+    title: 'Polish',
+    body: 'Hover states, mobile layout, and less motion if you ask for it. Small things that make it feel finished.',
   },
   {
     n: '04',
-    title: 'Scale',
-    body: 'Launch is the midpoint, not the finish. We measure, iterate, and compound what works.',
+    title: 'Ship',
+    body: 'Vite build, Vercel deploy, live URL. The point is a real site people can open.',
   },
 ]
 
-const HEAD_A = 'An extension of your team,'
-const HEAD_B = 'an outside agency.'
+const HEAD_A = 'From a blank file'
+const HEAD_B = 'to a live 3D page.'
 
 export function Process({ reduced }: { reduced: boolean }) {
   const sectionRef = useRef<HTMLElement>(null)
@@ -141,19 +141,18 @@ export function Process({ reduced }: { reduced: boolean }) {
       <div className="mb-14 flex flex-wrap items-end justify-between gap-6 md:mb-20">
         <div>
           <p className="mono-label mb-6" data-testid="process-label">
-            How we work
+            How I work
           </p>
           <h2
             ref={headingRef}
             className="max-w-2xl font-serif text-2xl leading-[1.15] tracking-tight text-paper sm:text-3xl lg:text-4xl"
           >
             {wrap(HEAD_A)}
-            {wrap('not', 'italic text-electric')}
             {wrap(HEAD_B)}
           </h2>
         </div>
         <p ref={asideRef} className="max-w-xs text-sm leading-relaxed text-white/55">
-          One integrated team, from the first workshop to launch — and long after.
+          One person, one page — idea, code, polish, then deploy.
         </p>
       </div>
 

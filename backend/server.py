@@ -133,7 +133,7 @@ _hits: dict[str, list[float]] = defaultdict(list)
 
 @api_router.get("/")
 async def root():
-    return {"message": "Kurieta API"}
+    return {"message": "3D Glow API"}
 
 
 @api_router.post("/contact")
@@ -154,13 +154,12 @@ async def contact(payload: ContactPayload, request: Request):
         '<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>'
         '<td style="padding:32px;font-family:Arial,sans-serif;background:#0A0E1F;color:#F6F7FC">'
         '<p style="font-size:11px;letter-spacing:3px;color:#3D5CFF;text-transform:uppercase;margin:0 0 16px">'
-        'Kurieta — New enquiry</p>'
+        '3D Glow — New enquiry</p>'
         f'<p style="font-size:20px;font-weight:600;margin:0 0 4px">{name}</p>'
         f'<p style="margin:0 0 20px"><a href="mailto:{email}" style="color:#3D5CFF">{email}</a></p>'
         f'<p style="line-height:1.7;white-space:pre-wrap;margin:0">{message}</p>'
         '<hr style="border:none;border-top:1px solid #1A2247;margin:28px 0">'
-        '<p style="font-size:11px;color:#8a8fa8;margin:0">Sent by the Kurieta website contact form · '
-        '<a href="https://kurieta.com" style="color:#8a8fa8">kurieta.com</a></p>'
+        '<p style="font-size:11px;color:#8a8fa8;margin:0">Sent by the 3D Glow contact form</p>'
         '</td></tr></table>'
     )
     email_id = await send_email(to=CONTACT_EMAIL, subject=subject, html=html)
